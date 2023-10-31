@@ -10,7 +10,6 @@ interface ClientRowProps {
 
 const ClientRow = ({ client }: ClientRowProps) => {
   const [deleteClient] = useMutation(DELETE_CLIENT, {
-    variables: { id: client.id },
     refetchQueries: [GET_CLIENTS, "getClients"],
   });
 
